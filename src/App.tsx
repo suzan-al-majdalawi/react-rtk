@@ -7,7 +7,7 @@ import type { AppDispatch } from './store/store'
 function App() {
   const count = useSelector(selectNotificationsCount)
   const dispatch = useDispatch<AppDispatch>()
-  const resetStatus = useSelector((state: any) => state.notification.resetStatus);
+  const resetStatus = useSelector((state: { notification: { resetStatus: string } }) => state.notification.resetStatus)
 
   const resetButtonText =  () => {
     switch (resetStatus) {
